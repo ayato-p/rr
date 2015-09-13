@@ -7,7 +7,7 @@
 
 (defn last-line-via-stdio []
   (with-open [r (io/reader huge-file)]
-    (first (line-seq r))))
+    (last (line-seq r))))
 
 (defn last-line-via-rr []
   (with-open [r (rr/reader huge-file)]
