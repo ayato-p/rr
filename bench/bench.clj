@@ -14,27 +14,25 @@
     (first (rr/line-seq r))))
 
 (c/bench (last-line-via-stdio))
-;; Evaluation count : 240 in 60 samples of 4 calls.
-;;              Execution time mean : 282.857924 ms
-;;     Execution time std-deviation : 1.644174 ms
-;;    Execution time lower quantile : 281.961398 ms ( 2.5%)
-;;    Execution time upper quantile : 283.869007 ms (97.5%)
-;;                    Overhead used : 11.058201 ns
+;; Evaluation count : 300 in 60 samples of 5 calls.
+;;              Execution time mean : 209.071375 ms
+;;     Execution time std-deviation : 2.580759 ms
+;;    Execution time lower quantile : 205.964662 ms ( 2.5%)
+;;    Execution time upper quantile : 214.501153 ms (97.5%)
+;;                    Overhead used : 9.982297 ns
 
-;; Found 4 outliers in 60 samples (6.6667 %)
-;;      low-severe   3 (5.0000 %)
-;;      low-mild     1 (1.6667 %)
+;; Found 2 outliers in 60 samples (3.3333 %)
+;;      low-severe   2 (3.3333 %)
 ;;  Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
 
 (c/bench (last-line-via-rr))
-;; Evaluation count : 3837720 in 60 samples of 63962 calls.
-;;              Execution time mean : 15.669411 µs
-;;     Execution time std-deviation : 48.390913 ns
-;;    Execution time lower quantile : 15.632208 µs ( 2.5%)
-;;    Execution time upper quantile : 15.729416 µs (97.5%)
-;;                    Overhead used : 11.058201 ns
+;; Evaluation count : 7811880 in 60 samples of 130198 calls.
+;;              Execution time mean : 7.842190 µs
+;;     Execution time std-deviation : 68.214523 ns
+;;    Execution time lower quantile : 7.743285 µs ( 2.5%)
+;;    Execution time upper quantile : 8.001377 µs (97.5%)
+;;                    Overhead used : 9.982297 ns
 
-;; Found 4 outliers in 60 samples (6.6667 %)
-;;      low-severe   3 (5.0000 %)
-;;      low-mild     1 (1.6667 %)
+;; Found 2 outliers in 60 samples (3.3333 %)
+;;      low-severe   2 (3.3333 %)
 ;;  Variance from outliers : 1.6389 % Variance is slightly inflated by outliers
