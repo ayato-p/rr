@@ -5,6 +5,8 @@
 .. image:: https://circleci.com/gh/ayato-p/rr.svg?style=svg
     :target: https://circleci.com/gh/ayato-p/rr
 
+|
+
 .. image:: http://clojars.org/ayato_p/rr/latest-version.svg?style=svg
     :target: http://clojars.org/ayato_p/rr
 
@@ -13,7 +15,20 @@ ReverseReader for HUGE files.
 Usage
 =====
 
-FIXME
+This library will provide simple two API.
+
+First one is ``rr.core/reader`` function like a ``clojure.java.io/reader``. Returns reader instance of ``org.apache.commons.io.input.ReversedLinesFileReader``.
+
+Second one is ``rr.core/line-seq`` function simular to ``clojure.core/line-seq``, but just for ``rr.core/reader``.
+
+You can use these API as following.
+
+.. sourcecode:: clojure
+
+  (require '[rr.core :as rr])
+
+  (with-open [r (rr/reader "huge.log")]
+      (first (rr/line-seq r))) ;; returns last line of file.
 
 License
 =======
