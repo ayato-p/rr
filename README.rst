@@ -15,11 +15,11 @@ ReverseReader for HUGE files.
 Usage
 =====
 
-This library will provide simple two API.
+This library will provide two simple APIs.
 
-First one is ``rr.core/reader`` function like a ``clojure.java.io/reader``. Returns reader instance of ``org.apache.commons.io.input.ReversedLinesFileReader``.
+The first one is the ``rr.core/reader`` function which is like ``clojure.java.io/reader``. It returns an instance of ``org.apache.commons.io.input.ReversedLinesFileReader``.
 
-Second one is ``rr.core/line-seq`` function simular to ``clojure.core/line-seq``, but just for ``rr.core/reader``.
+Second one is the ``rr.core/line-seq`` function which is simular to ``clojure.core/line-seq``, but only for ``rr.core/reader``.
 
 You can use these API as following.
 
