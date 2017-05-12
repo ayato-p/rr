@@ -19,7 +19,7 @@ This library will provide two simple APIs.
 
 The first one is the ``rr.core/reader`` function which is like ``clojure.java.io/reader``. It returns an instance of ``org.apache.commons.io.input.ReversedLinesFileReader``.
 
-Second one is the ``rr.core/line-seq`` function which is simular to ``clojure.core/line-seq``, but only for ``rr.core/reader``.
+Second one is the ``rr.core/line-seq`` function which is similar to ``clojure.core/line-seq``, but only for ``rr.core/reader``.
 
 You can use these API as following.
 
